@@ -1,36 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>eddy</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background-color: #0f0f0f; /* Couleur de fond très sombre */
-      background-image: 
-        url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='pattern' patternUnits='userSpaceOnUse' width='200' height='200'%3E%3C!-- Ajoute tes icônes ici --%3E%3Ctext x='20' y='40' font-size='18' fill='%2388ffdd' opacity='0.7'%3E👻%3C/text%3E%3Ctext x='80' y='70' font-size='16' fill='%2388ffdd' opacity='0.6'%3E🎸%3C/text%3E%3Ctext x='140' y='35' font-size='18' fill='%2388ffdd' opacity='0.7'%3E🌸%3C/text%3E%3Ctext x='30' y='120' font-size='17' fill='%2388ffdd' opacity='0.6'%3E📷%3C/text%3E%3Ctext x='110' y='150' font-size='16' fill='%2388ffdd' opacity='0.7'%3E⚛️%3C/text%3E%3Ctext x='170' y='100' font-size='18' fill='%2388ffdd' opacity='0.5'%3E📡%3C/text%3E%3Ctext x='60' y='180' font-size='15' fill='%2388ffdd' opacity='0.7'%3E🦋%3C/text%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23pattern)'/%3E%3C/svg%3E");
-      background-repeat: repeat;
-      background-size: 220px 220px; /* Ajuste la densité du motif */
-      font-family: system-ui, sans-serif;
-    }
-
-    /* Optionnel : overlay pour un effet un peu plus doux */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background: radial-gradient(circle at center, transparent 40%, rgba(15,15,15,0.6) 100%);
-      pointer-events: none;
-      z-index: 1;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Platform - Who are you ?</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Ton contenu ici -->
-  <h1 style="color:#88ffdd; text-align:center; padding-top:100px; z-index:2; position:relative;">
-    Tsites  gftdt
-  </h1>
+    <div class="content">
+        
+        <!-- Section Who are you ? -->
+        <div class="who-section">
+            <div class="who-header">
+                <h2>Who are you ?</h2>
+                <p>Choose your role to get started</p>
+            </div>
+
+            <div class="roles-grid">
+                <!-- Visitor -->
+                <div class="role-card">
+                    <div class="icon-circle visitor">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Visitor</h3>
+                    <p>Browse content as a guest</p>
+                </div>
+
+                <!-- Student -->
+                <div class="role-card">
+                    <div class="icon-circle student">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Student</h3>
+                    <p>Learn and track your progress</p>
+                </div>
+
+                <!-- Parent -->
+                <div class="role-card">
+                    <div class="icon-circle parent">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Parent</h3>
+                    <p>Monitor your child's progress</p>
+                </div>
+
+                <!-- Staff -->
+                <div class="role-card">
+                    <div class="icon-circle staff">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Staff</h3>
+                    <p>Manage and organize educational content</p>
+                </div>
+            </div>
+
+            <button class="cta-button">
+                Let's Check Up →
+            </button>
+        </div>
+
+    </div>
 </body>
 </html>
