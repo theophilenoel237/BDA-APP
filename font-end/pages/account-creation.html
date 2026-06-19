@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connection Page</title>
+
+<style>
+/* ===== COLOR SYSTEM ===== */
+:root{
+    --gold:#FEF0AF;
+    --blue-dark:#2B446C;
+    --dark:#1D0D00;
+    --white:#FDFDFD;
+    --black:#000000;
+}
+
+/* ===== PAGE ===== */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: var(--white);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* ===== MAIN CARD ===== */
+.card{
+    width:360px;
+    background: var(--blue-dark);
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    color: var(--white);
+    border: 2px solid var(--gold);
+}
+
+/* Title */
+.card h2{
+    text-align:center;
+    margin-bottom:20px;
+    color: var(--gold);
+}
+
+/* Inputs */
+input{
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+    background: var(--white);
+    color: var(--dark);
+}
+
+/* Buttons */
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s ease;
+}
+
+/* Submit */
+.btn-submit{
+    background: var(--gold);
+    color: var(--black);
+}
+
+.btn-submit:hover{
+    background: var(--black);
+    color: var(--gold);
+    border: 1px solid var(--gold);
+}
+
+/* Google Button */
+.btn-google{
+    background: var(--white);
+    color: var(--dark);
+    margin-top:10px;
+}
+
+.btn-google:hover{
+    background: var(--dark);
+    color: var(--white);
+}
+
+/* Links section */
+.links{
+    text-align:center;
+    margin-top:15px;
+    font-size:14px;
+}
+
+.links a{
+    color: var(--gold);
+    text-decoration:none;
+}
+
+.links a:hover{
+    text-decoration:underline;
+    color: var(--white);
+}
+
+/* Divider */
+.divider{
+    text-align:center;
+    margin:15px 0;
+    color: var(--gold);
+    font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>Connect</h2>
+
+    <form>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <div class="links">
+            <p><a href="#">Forgot password?</a></p>
+            <p><a href="#">I don't have an account yet</a></p>
+        </div>
+        <button class="btn-submit" type="submit">Sign In</button>
+
+        <div class="divider">OR</div>
+
+        <button class="btn-google" type="button">
+            Continue with Google
+        </button>
+    </form>
+
+    
+</div>
+
+</body>
+</html>

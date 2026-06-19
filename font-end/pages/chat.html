@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account</title>
+
+<style>
+:root{
+  --gold:#FEF0AF;
+  --blue-dark:#2B446C;
+  --dark:#1D0D00;
+  --white:#FDFDFD;
+  --black:#000000;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+/* CARD */
+.box{
+  width:100%;
+  max-width:500px;
+  background:var(--blue-dark);
+  border:2px solid var(--black);
+  border-radius:18px;
+  padding:28px;
+  color:var(--white);
+  box-shadow:0 0 20px 15px var(--gold);
+}
+
+h2{
+  text-align:center;
+  margin-bottom:18px;
+  color:var(--gold);
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+label{
+  font-size:14px;
+  font-weight:bold;
+}
+
+input, select{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid var(--black);
+  background:var(--white);
+  color:var(--black);
+  outline:none;
+  font-size:14px;
+}
+
+/* SUBJECTS SECTION */
+.subjects{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  background:var(--dark);
+  padding:10px;
+  border-radius:10px;
+  border:1px solid var(--gold);
+}
+
+.subjects label{
+  font-weight:normal;
+  font-size:13px;
+}
+
+/* BUTTON */
+button{
+  margin-top:10px;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s ease;
+  background:var(--gold);
+  color:var(--dark);
+}
+
+button:hover{
+  background:var(--black);
+  color:var(--gold);
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Create Account</h2>
+
+  <form>
+
+    <!-- FULL NAME -->
+    <label>Full Name</label>
+    <input type="text" placeholder="Write your name as on the birth certificate" required>
+
+    <!-- AGE -->
+    <label>Age</label>
+    <input type="number" min="1" max="100" required>
+
+    <!-- SERIES -->
+    <label>Series</label>
+    <select required>
+      <option value="">Select your series</option>
+      <option>Science</option>
+      <option>Arts</option>
+      <option>Commercial</option>
+      <option>Technical</option>
+      <option>Literary</option>
+    </select>
+
+    <!-- CLASS -->
+    <label>Class</label>
+    <input type="text" placeholder="e.g. Form 5, Upper Sixth, etc." required>
+
+    <!-- SCHOOL -->
+    <label>School</label>
+    <input type="text" placeholder="Enter your school name" required>
+
+    <!-- EMAIL -->
+    <label>Email Address</label>
+    <input type="email" placeholder="example@gmail.com" required>
+
+    <!-- SUBJECTS -->
+    <label>Select Subjects (choose 2 to 5)</label>
+    <div class="subjects">
+      <label><input type="checkbox"> Mathematics</label>
+      <label><input type="checkbox"> Physics</label>
+      <label><input type="checkbox"> Chemistry</label>
+      <label><input type="checkbox"> Biology</label>
+      <label><input type="checkbox"> Computer Science</label>
+      <label><input type="checkbox"> Economics</label>
+      <label><input type="checkbox"> Geography</label>
+      <label><input type="checkbox"> English</label>
+    </div>
+
+    <button type="submit">Create Account</button>
+
+  </form>
+</div>
+
+</body>
+</html>
