@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BIG DREAM ACADEMY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/who_are_you.css"/>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="blob blob-top-left"></div>
+    <div class="blob blob-bottom-right"></div>
+
+    <header class="site-header">
+      <div class="logo">
+        <div class="logo-icon">
+        <img src="../images/BDA-logo.jpeg" width="50px">
+        </div>
+        <span class="logo-text">BIG DREAM<span class="logo-accent">ACADEMY Platform</span></span>
+      </div>
+      <p class="logo-tagline">Explore, Learn &amp; Achieve Your Goals</p>
+    </header>
+
+    <main class="card">
+      <h1 class="card-title">Who are you?</h1>
+      <p class="card-subtitle">Choose your role to get started</p>
+
+      <div class="roles">
+
+        <label class="role-card" data-role="visitor">
+          <input type="radio" name="role" value="visitor" hidden/>
+          <div class="role-icon visitor-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+          <div class="role-info">
+            <span class="role-name">Visitor</span>
+            <span class="role-desc">Browse content as a guest</span>
+          </div>
+          <div class="role-radio"><div class="radio-dot"></div></div>
+        </label>
+
+        <label class="role-card" data-role="student">
+          <input type="radio" name="role" value="student" hidden/>
+          <div class="role-icon student-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <div class="role-info">
+            <span class="role-name">Student</span>
+            <span class="role-desc">Learn and track your progress</span>
+          </div>
+          <div class="role-radio"><div class="radio-dot"></div></div>
+        </label>
+
+        <label class="role-card" data-role="parent">
+          <input type="radio" name="role" value="parent" hidden/>
+          <div class="role-icon parent-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="7" r="3"/>
+              <circle cx="16" cy="9" r="2.5"/>
+              <path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6"/>
+              <path d="M16 14c2.5 0 5 1.5 5 4"/>
+            </svg>
+          </div>
+          <div class="role-info">
+            <span class="role-name">Parent</span>
+            <span class="role-desc">Monitor your child's progress</span>
+          </div>
+          <div class="role-radio"><div class="radio-dot"></div></div>
+        </label>
+
+        <label class="role-card" data-role="staff">
+          <input type="radio" name="role" value="staff" hidden/>
+          <div class="role-icon staff-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2"/>
+              <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+              <line x1="12" y1="12" x2="12" y2="16"/>
+              <line x1="10" y1="14" x2="14" y2="14"/>
+            </svg>
+          </div>
+          <div class="role-info">
+            <span class="role-name">Staff</span>
+            <span class="role-desc">Manage and organize educational content</span>
+          </div>
+          <div class="role-radio"><div class="radio-dot"></div></div>
+        </label>
+
+      </div>
+
+      <button class="cta-btn" id="ctaBtn" disabled>
+        <span>Let's Check Up</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Study Platform. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
