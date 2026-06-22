@@ -8,7 +8,7 @@
   --black:       #0a0a0f;
   --black-card:  #111118;
   --black-role:  #16161f;
-  --gold:        #FEF0AF;
+  --gold:        #c9a84c;
   --gold-light:  #e2c47a;
   --gold-dim:    #c9a84c33;
   --steel:       #4a7fa5;
@@ -16,13 +16,10 @@
   --border:      #2a2a38;
   --white:       #f4f4f6;
   --white-muted: #9090a8;
-  --blue-dark:#2B446C;
-
-
 }
 
 body {
-  background: url('../images/background.jpeg');
+  background: var(--white);
   color: var(--white);
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
@@ -97,7 +94,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 1.55rem;
   font-weight: 700;
-  color: var(--blue-dark);
+  color: var(--steel);
 }
 
 .logo-accent {
@@ -113,86 +110,82 @@ body {
 }
 
 .card {
-  background: var(--gold);
+  background: var(--black-card);
   border: 1px solid var(--border);
   border-radius: 24px;
   padding: 44px 40px;
   width: 100%;
-  max-width: 480px;
   z-index: 1;
   box-shadow: 0 24px 80px #00000055;
+}
+
+.card-wide {
+  max-width: 620px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--white-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+  transition: color 0.2s, transform 0.18s;
+}
+
+.back-btn:hover {
+  color: var(--gold-light);
+  transform: translateX(-3px);
 }
 
 .card-title {
   font-family: 'Playfair Display', serif;
   font-size: 1.9rem;
   font-weight: 700;
-  color: var(--blue-dark);
+  color: var(--white);
   text-align: center;
   margin-bottom: 6px;
 }
 
 .card-subtitle {
   font-size: 0.88rem;
-  color: var(--blue-dark);
+  color: var(--white-muted);
   text-align: center;
   margin-bottom: 32px;
   font-weight: 300;
 }
 
-.roles {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 32px;
+.subjects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
 }
 
-.role-card {
+.subject {
   display: flex;
   align-items: center;
-  gap: 16px;
-  background: var(--blue-dark);
+  gap: 14px;
+  background: var(--black-role);
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 16px 18px;
   cursor: pointer;
+  text-decoration: none;
   transition: border-color 0.25s, background 0.25s, transform 0.18s;
-  position: relative;
-  overflow: hidden;
 }
 
-.role-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 0.25s;
-  border-radius: 14px;
-  pointer-events: none;
-}
-
-.role-card:hover {
+.subject:hover {
   transform: translateX(4px);
-  background-color: var(--steel-light);
-  color: var(--gold-dim);
-
-}
-
-.role-card.selected {
-  border-color: var(--steel);
+  border-color: var(--gold);
   background: #1a1810;
-  color: var(--gold-light);
 }
 
-.role-card.selected::before {
-  background: linear-gradient(90deg, var(--gold-dim), transparent);
-  opacity: 1;
-}
-
-.role-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+.subject-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,102 +193,30 @@ body {
   transition: background 0.25s, color 0.25s;
 }
 
-.visitor-icon { background: var(--white); color: var(--steel-light); }
-.student-icon { background: var(--white); color: #7ec87e; }
-.parent-icon  { background: var(--white); color: var(--black); }
-.staff-icon   { background: var(--white); color: #c47ec4; }
+.icon-biology      { background: #1f2a1a; color: #7ec87e; }
+.icon-chemistry    { background: #2a1a1f; color: #d97e9c; }
+.icon-physics      { background: #1a2535; color: var(--steel-light); }
+.icon-food         { background: #2a2310; color: var(--gold-light); }
+.icon-furthermath  { background: #1a2030; color: #8aa8e0; }
+.icon-computer     { background: #251525; color: #c47ec4; }
+.icon-ict          { background: #102a28; color: #6fccc0; }
+.icon-geology      { background: #2a1f12; color: #d6a35c; }
+.icon-math         { background: #161d2a; color: #7ea3d9; }
 
-.role-card.selected .role-icon {
+.subject:hover .subject-icon {
   background: var(--gold-dim);
   color: var(--gold-light);
 }
 
-.role-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  z-index: 1;
-}
-
-.role-name {
-  font-size: 0.97rem;
+.subject-name {
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--white);
   transition: color 0.25s;
 }
 
-.role-card.selected .role-name {
+.subject:hover .subject-name {
   color: var(--gold-light);
-}
-
-.role-desc {
-  font-size: 0.78rem;
-  color: var(--gold);
-  font-weight: 300;
-}
-
-.role-radio {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 2px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: border-color 0.25s;
-  z-index: 1;
-}
-
-.radio-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--gold);
-  opacity: 0;
-  transform: scale(0);
-  transition: opacity 0.2s, transform 0.2s;
-}
-
-.role-card.selected .role-radio {
-  border-color: var(--gold);
-}
-
-.role-card.selected .radio-dot {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.cta-btn {
-  width: 100%;
-  padding: 15px 24px;
-  border-radius: 12px;
-  border: none;
-  background: var(--white);
-  color: var(--blue-dark);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.97rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  transition: opacity 0.2s, transform 0.18s, box-shadow 0.2s;
-  box-shadow: 0 4px 24px var(--gold-dim);
-}
-
-.
-
-.cta-btn:not(:disabled):hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px #c9a84c55;
-}
-
-.cta-btn:not(:disabled):active {
-  transform: translateY(0);
 }
 
 .site-footer {
@@ -304,11 +225,9 @@ body {
   color: #4a4a60;
   z-index: 1;
 }
-.eddy{
-  color: #fff;
-}
 
 @media (max-width: 520px) {
   .card { padding: 32px 20px; }
   .card-title { font-size: 1.5rem; }
+  .subjects-grid { grid-template-columns: 1fr; }
 }
