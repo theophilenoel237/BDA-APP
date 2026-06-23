@@ -23,6 +23,7 @@ align-items: center;
 justify-content: center;
 padding: 40px 16px;
 z-index: 1;
+color: var(--blue-dark);
 }
 .logo {
 display: flex;
@@ -68,7 +69,8 @@ z-index: 1;
 }
 
 body{
-background:var(--white);
+background: url('../images/background.jpeg');
+background-size: contain;
 min-height:100vh;
 display:flex;
 align-items:center;

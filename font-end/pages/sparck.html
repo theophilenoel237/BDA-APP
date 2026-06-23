@@ -6,131 +6,140 @@
   <title>Account Creation</title>
   <style>
     :root{
-      --gold:#FEF0AF;
-      --blue-dark:#2B446C;
-      --dark:#1D0D00;
-      --white:#FDFDFD;
-      --black:#000000;
-    }
+  --gold:#FEF0AF;
+  --blue-dark:#2B446C;
+  --dark:#1D0D00;
+  --white:#FDFDFD;
+  --black:#000000;
+  --white-muted:#9090a8;
+}
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
 
-    body{
-      background:var(--white);
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:24px;
-    }
+body{
+  background:var(--white);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
 
-    .box{
-      width:100%;
-      max-width:520px;
-      background:var(--blue-dark);
-      border:2px solid var(--black);
-      border-radius:18px;
-      padding:32px;
-      color:var(--white);
-      box-shadow:0 0 20px 20px var(--gold);
-    }
+.box{
+  width:100%;
+  max-width:520px;
+  background:var(--gold);
+  border:2px solid var(--black);
+  border-radius:18px;
+  padding:32px;
+  color:var(--white);
+}
 
-    h2{
-      margin-bottom:20px;
-      font-size:28px;
-      color:var(--gold);
-      text-align:center;
-    }
+h2{
+  margin-bottom:20px;
+  font-size:28px;
+  color:var(--blue-dark);
+  text-align:center;
+}
 
-    form{
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-    }
+form{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
 
-    label{
-      font-size:14px;
-      font-weight:700;
-    }
+label{
+  font-size:14px;
+  font-weight:700;
+  color:var(--blue-dark);
+}
 
-    input,
-    select,
-    textarea{
-      width:100%;
-      padding:13px 14px;
-      border:1px solid var(--black);
-      border-radius:10px;
-      background:var(--white);
-      color:var(--black);
-      font-size:15px;
-      outline:none;
-    }
+input,
+select,
+textarea{
+  width:100%;
+  padding:13px 14px;
+  border:1px solid var(--black);
+  border-radius:10px;
+  background:var(--blue-dark);
+  color:var(--white);
+  font-size:15px;
+  outline:none;
+}
 
-    textarea{
-      min-height:90px;
-      resize:vertical;
-    }
+input::placeholder,
+textarea::placeholder{
+  color:rgba(255,255,255,0.7);
+}
 
-    .subjects{
-      background:rgba(255,255,255,0.12);
-      border:1px solid var(--gold);
-      border-radius:12px;
-      padding:14px;
-    }
+select{
+  cursor:pointer;
+}
 
-    .subjects p{
-      margin-bottom:12px;
-      font-size:14px;
-      color:var(--gold);
-    }
+.subjects{
+  background:rgba(43,68,108,0.12);
+  border:1px solid var(--blue-dark);
+  border-radius:12px;
+  padding:14px;
+}
 
-    .subject-list{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px 18px;
-    }
+.subjects p{
+  margin-bottom:12px;
+  font-size:14px;
+  color:var(--blue-dark);
+  font-weight:700;
+}
 
-    .subject-item{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      font-size:14px;
-    }
+.subject-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px 18px;
+}
 
-    .subject-item input{
-      width:auto;
-    }
+.subject-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:14px;
+  color:var(--blue-dark);
+}
 
-    button{
-      padding:13px 16px;
-      border:1px solid var(--black);
-      border-radius:10px;
-      font-size:15px;
-      font-weight:700;
-      cursor:pointer;
-      transition:0.3s ease;
-    }
+.subject-item input{
+  width:auto;
+  accent-color:var(--blue-dark);
+}
 
-    .submit-btn{
-      background:var(--gold);
-      color:var(--dark);
-    }
+button{
+  padding:13px 16px;
+  border:1px solid var(--black);
+  border-radius:10px;
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s ease;
+}
 
-    .submit-btn:hover{
-      background:var(--black);
-      color:var(--gold);
-    }
+.submit-btn{
+  background:var(--blue-dark);
+  color:var(--white);
+}
 
-    .note{
-      font-size:13px;
-      color:var(--gold);
-      text-align:center;
-    }
+.submit-btn:hover{
+  background:var(--black);
+  color:var(--gold);
+}
+
+.note{
+  font-size:13px;
+  color:var(--blue-dark);
+  text-align:center;
+  font-weight:600;
+}
   </style>
 </head>
 <body>
@@ -152,21 +161,12 @@
 
       <label for="series">Series</label>
       <select id="series" name="series" required>
-        <option value="">Select series</option>
         <option value="science">Science</option>
         <option value="arts">Arts</option>
-        <option value="commercial">Commercial</option>
-        <option value="technical">Technical</option>
       </select>
-
-      <label for="class">Class</label>
-      <input type="text" id="class" name="class" required>
 
       <label for="school">School</label>
       <input type="text" id="school" name="school" required>
-
-      <label for="address">Address</label>
-      <textarea id="address" name="address" required></textarea>
 
       <label for="email">Email Address</label>
       <input type="email" id="email" name="email" required>
